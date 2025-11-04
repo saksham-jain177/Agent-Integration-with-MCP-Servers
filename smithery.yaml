@@ -4,7 +4,7 @@ description: "MCP server project bridging Notion and GitHub for RAG and agent re
 
 type: stdio
 
-startCommand: python app.py
+startCommand: python3 app.py
 
 configSchema:
   type: object
