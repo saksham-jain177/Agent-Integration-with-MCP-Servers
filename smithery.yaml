@@ -2,7 +2,7 @@ name: agent-integration-with-mcp-servers
 version: "1.0.0"
 description: "Diagnostic minimal Smithery config"
 
-type: stdio
+type: custom
 startCommand: python3 app.py
 
 env:
