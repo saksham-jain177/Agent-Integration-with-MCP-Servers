@@ -2,7 +2,7 @@ name: agent-integration-with-mcp-servers
 version: "1.0.0"
 description: "MCP server project bridging Notion and GitHub for RAG and agent retrieval"
 
-type: stdio
+type: python
 
 startCommand: python app.py
 
@@ -30,14 +30,6 @@ env:
   OPENAI_API_KEY: ${OPENAI_API_KEY}
   NOTION_TOKEN: ${NOTION_TOKEN}
   GITHUB_TOKEN: ${GITHUB_TOKEN}
-
-resources:
-  - name: notion-tool
-    tool: notion
-    description: "Connector to Notion workspace pages and databases"
-  - name: github-tool
-    tool: github
-    description: "Connector to GitHub repository for code and metadata"
 
 permissions:
   network: true
