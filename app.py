@@ -2,7 +2,7 @@ import sys
 import json
 import threading
 import logging
-from typing import Any, Dict, List, Optional, Iterable
+from typing import Any, Dict, List, Optional
 
 from utils.config_loader import load_config
 from utils.rate_limiter import rate_limited_session

@@ -4,10 +4,27 @@ description: "MCP server project bridging Notion and GitHub for RAG and agent re
 
 type: python
 
-startCommand: python3 app.py
+startCommand: python app.py
 
 build:
   requirementsPath: requirements.txt
+
+configSchema:
+  type: object
+  properties:
+    OPENAI_API_KEY:
+      type: string
+      description: "OpenAI API key"
+    NOTION_TOKEN:
+      type: string
+      description: "Notion integration token"
+    GITHUB_TOKEN:
+      type: string
+      description: "GitHub personal access token"
+  required:
+    - OPENAI_API_KEY
+    - NOTION_TOKEN
+    - GITHUB_TOKEN
 
 env:
   OPENAI_API_KEY: ${OPENAI_API_KEY}
