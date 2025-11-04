@@ -1,9 +1,13 @@
 name: agent-integration-with-mcp-servers
 version: "1.0.0"
-description: "Diagnostic minimal Smithery config"
+description: "MCP server project bridging Notion and GitHub for RAG and agent retrieval"
 
-type: custom
+type: python
+
 startCommand: python3 app.py
+
+build:
+  requirementsPath: requirements.txt
 
 env:
   OPENAI_API_KEY: ${OPENAI_API_KEY}
