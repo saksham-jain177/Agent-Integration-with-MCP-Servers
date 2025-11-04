@@ -116,17 +116,48 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file:
+4. Set environment variables:
 ```bash
-OPENAI_API_KEY=your_openai_api_key
-NOTION_TOKEN=your_notion_token
-GITHUB_TOKEN=your_github_token
+# On Linux/Mac:
+export OPENAI_API_KEY=your_openai_api_key
+export NOTION_TOKEN=your_notion_token
+export GITHUB_TOKEN=your_github_token
+
+# On Windows PowerShell:
+$env:OPENAI_API_KEY="your_openai_api_key"
+$env:NOTION_TOKEN="your_notion_token"
+$env:GITHUB_TOKEN="your_github_token"
 ```
 
-5. Run the server:
+5. Test the server locally:
 ```bash
+# Run the test script
+python test_mcp_local.py
+
+# Or run the server directly (for stdio JSON-RPC)
 python app.py
 ```
+
+### Local Testing & Demonstration
+
+The MCP server is designed to work via stdio JSON-RPC. For assignment demonstration:
+
+1. **Test locally** using `test_mcp_local.py`:
+   ```bash
+   python test_mcp_local.py
+   ```
+
+2. **Connect via MCP client** (Claude Desktop, Cursor, etc.):
+   - Configure your MCP server path
+   - Test all tools and functionality
+
+3. **Demonstrate workflow**:
+   - Show Notion data retrieval
+   - Show GitHub data retrieval
+   - Show RAG query with reasoning
+   - Show source citations
+
+See `DEPLOYMENT_ALTERNATIVES.md` for more details on local testing and alternative deployment options.
 
 ### Smithery Deployment
 

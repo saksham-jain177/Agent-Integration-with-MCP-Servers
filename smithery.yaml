@@ -1,34 +1,3 @@
 name: agent-integration-with-mcp-servers
-version: "1.0.0"
-description: "MCP server project bridging Notion and GitHub for RAG and agent retrieval"
-
 type: stdio
-
 startCommand: python app.py
-
-build:
-  type: python
-  requirementsPath: requirements.txt
-
-configSchema:
-  type: object
-  properties:
-    OPENAI_API_KEY:
-      type: string
-    NOTION_TOKEN:
-      type: string
-    GITHUB_TOKEN:
-      type: string
-  required:
-    - OPENAI_API_KEY
-    - NOTION_TOKEN
-    - GITHUB_TOKEN
-
-env:
-  OPENAI_API_KEY: ${OPENAI_API_KEY}
-  NOTION_TOKEN: ${NOTION_TOKEN}
-  GITHUB_TOKEN: ${GITHUB_TOKEN}
-
-permissions:
-  network: true
-  filesystem: false
